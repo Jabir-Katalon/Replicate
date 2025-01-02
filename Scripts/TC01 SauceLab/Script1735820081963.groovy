@@ -20,7 +20,8 @@ import org.openqa.selenium.Keys as Keys
 WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://demoaut.katalon.com/')
-//Test
+
+WebUI.delay(1)
 
 WebUI.closeBrowser()
 
