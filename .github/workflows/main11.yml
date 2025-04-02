@@ -42,17 +42,17 @@ jobs:
 
         java-version: '17'
 
-name: Prepare
+# name: Prepare
 
-      run: |
+#       run: |
 
-            sudo apt-get -y install xvfb
+#             sudo apt-get -y install xvfb
 
-            sudo /usr/bin/Xvfb :0 -screen 0 1280x1024x24 &
+#             sudo /usr/bin/Xvfb :0 -screen 0 1280x1024x24 &
 
             
 
-name: Katalon Studio Github Action
+      name: Katalon Studio Github Action
 
       uses: katalon-studio/katalon-studio-github-action@v2
 
