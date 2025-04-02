@@ -35,3 +35,5 @@ WebUI.verifyElementText(findTestObject('Object Repository/Page_CURA Healthcare S
 
 WebUI.closeBrowser()
 
+// Test
+
