@@ -15,18 +15,28 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver
+
+// Define the path to your ChromeDriver executable
+//String chromedriverPath = "mohammedjabir@Mohammeds-MacBook-Air chromedriver-mac-arm64" // Replace with your actual path
+
 
 WebUI.openBrowser('')
 
-co = new org.openqa.selenium.chrome.ChromeOptions()
-System.setProperty("webdriver.chrome.driver", getChromeDriverPath())
-driver = getWebDriver()
-devToolsService = ChromeDevToolsProtocolSupport.getService(driver)
+//ChromeOptions co = new ChromeOptions();
+//co.addArguments("--remote-allow-origins=*")
+//
+//System.setProperty('webdriver.chrome.driver', DriverFactory.getChromeDriverPath())
+//
+//WebDriver driver = new ChromeDriver(co);
+//driver.get(url)
+//
+//DriverFactory.changeWebDriver(driver)
+//ChromeDevToolsService cdts = CdpUtils.getService()
+
 
 WebUI.navigateToUrl('http://demoaut.katalon.com/')
 
 WebUI.delay(1)
 
 WebUI.closeBrowser()
-
