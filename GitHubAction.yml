@@ -1,0 +1,58 @@
+name: CI
+on:
+ push:
+
+    branches: [ "master" ]
+
+  pull_request:
+
+    branches: [ "master" ]
+
+ 
+
+  # Allows you to run this workflow manually from the Actions tab
+
+  workflow_dispatch:
+
+ 
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+
+    - uses: actions/setup-java@v3
+
+      with:
+
+        distribution: 'zulu' # Set any 'Supported distributions' according to your preferences
+
+        java-version: '17'
+
+name: Prepare
+
+      run: |
+
+            sudo apt-get -y install xvfb
+
+            sudo /usr/bin/Xvfb :0 -screen 0 1280x1024x24 &
+
+            
+
+name: Katalon Studio Github Action
+
+      uses: katalon-studio/katalon-studio-github-action@v2
+
+      with:
+
+          version: '9.7.4'
+
+          projectPath: '${{ github.workspace }}'
+
+          args: -testSuitePath="Test Suites/GitHub Actions" -browserType="Chrome" -apiKey="18518f73-41ec-469e-b6eb-6422fef6bb2b") --config -webui.autoUpdateDrivers=true'
+          
