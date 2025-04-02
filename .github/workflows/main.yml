@@ -1,0 +1,20 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: linux
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.1
+    - name: Katalon Studio Github Action
+      uses: katalon-studio/katalon-studio-github-action@v2
+      with:
+          version: '7.5.5'
+          projectPath: '${{ github.workspace }}'
+          args: '-noSplash -retry=0 -testSuiteCollectionPath="Test Suites/GitHub Actions" -apiKey="18518f73-41ec-469e-b6eb-6422fef6bb2b" --config -webui.autoUpdateDrivers=true'
+
