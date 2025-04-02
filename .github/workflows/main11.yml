@@ -51,15 +51,10 @@ jobs:
 #             sudo /usr/bin/Xvfb :0 -screen 0 1280x1024x24 &
 
             
-
-      name: Katalon Studio Github Action
-
-      uses: katalon-studio/katalon-studio-github-action@v2
-
+- name: Katalon Studio Github Action
+      uses: katalon-studio/katalon-studio-github-action@v2.1
       with:
-
           version: '9.7.4'
-
           projectPath: '${{ github.workspace }}'
 
           args: '-testSuitePath="Test Suites/GitHub Actions"  -browserType="Chrome" -apiKey="18518f73-41ec-469e-b6eb-6422fef6bb2b" --config -webui.autoUpdateDrivers=true'
