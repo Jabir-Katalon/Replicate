@@ -37,6 +37,8 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://demoaut.katalon.com/')
 
+
+
 WebUI.delay(1)
 
 WebUI.closeBrowser()
